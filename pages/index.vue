@@ -1,5 +1,14 @@
 <template>
-  <div class="all">
+  <div class="all"
+      v-touch:tap="onTap"
+      v-touch:swipe.left="onSwipeLeft"
+      v-touch:swipe.right="onSwipeRight"
+      v-touch:swipe.top="onSwipeUp"
+      v-touch:swipe.bottom="onSwipeDown"
+  >
+    <div class="special-image" v-show="isDisplaySpecialImage">
+      <img src="../assets/special.png" class="home_mv_img">
+    </div>
     <div class="modal-all" v-show="isDisplayModal">
       <div class="modal-window">
         <span class="modal-close" v-on:click="closeModal">&times;</span>
@@ -31,12 +40,7 @@
       <img src="../assets/sample2.webp" class="home_mv_img">
     </div>
     <div class="home_mv_text">
-      <h1 v-touch:tap="onTap"
-        v-touch:swipe.left="onSwipeLeft"
-        v-touch:swipe.right="onSwipeRight"
-        v-touch:swipe.top="onSwipeUp"
-        v-touch:swipe.bottom="onSwipeDown"
-      >
+      <h1>
           Welcome
       </h1>
     </div>
@@ -91,6 +95,7 @@
   let count = 0;
   const isDisplayModal = ref(false);
   const isDisplayCmd = ref(false);
+  const isDisplaySpecialImage = ref(false);
   const cmdHistory = ref([]);
 
   const cmdHistoryStr = computed(() => {
@@ -152,6 +157,10 @@
     const konamiStr = konami.join();
     if(cmdHistory.value.join() == konamiStr) {
       console.log("debug:trigger konami")
+      isDisplaySpecialImage.value = true;
+      setTimeout(() => {
+        isDisplaySpecialImage.value = false;
+      }, 5000);
       cmdHistory.value = [];
     }
   }
@@ -281,6 +290,15 @@
   margin-bottom: 0;
   text-align: center;
   font-size: 1.7rem;
+}
+
+.special-image {
+  position: fixed;
+  width: 80%;
+  height: 60%;
+  top: 20%;
+  left: 10%;
+  z-index: 100;
 }
 
 .modal-all {
