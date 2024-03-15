@@ -1,1 +1,0 @@
-import{d as a,r as m,o as s,m as r,q as c}from"./entry.ae151aa4.js";const l=["innerHTML"],u=a({__name:"minigame",setup(i){const e=m("");s(()=>{o()});const o=()=>{fetch("/minigame.html").then(n=>{n.text().then(t=>{e.value=t})})};return(n,t)=>(r(),c("div",{innerHTML:e.value},null,8,l))}});export{u as default};

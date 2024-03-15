@@ -5,8 +5,9 @@
       v-touch:swipe.right="onSwipeRight"
       v-touch:swipe.top="onSwipeUp"
       v-touch:swipe.bottom="onSwipeDown"
+      v-touch:longtap="onLongTap"
   >
-    <div class="home_mv" v-touch:longtap="onLongTap">
+    <div class="home_mv">
       <img src="../sample2.webp" class="home_mv_img">
     </div>
     <div class="home_mv_text">
