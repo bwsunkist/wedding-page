@@ -12,5 +12,10 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.3"
+  },
+  "dependencies": {
+    "@wdns/vue-easter-egg-trigger": "^3.0.2",
+    "s": "^1.0.0",
+    "vue3-touch-events": "^4.1.8"
   }
 }
