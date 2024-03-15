@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
+    baseURL: '/wedding-page',
     head: {
       title: "Wedding 2024.03.16",
       link: [

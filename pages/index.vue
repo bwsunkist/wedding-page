@@ -6,36 +6,6 @@
       v-touch:swipe.top="onSwipeUp"
       v-touch:swipe.bottom="onSwipeDown"
   >
-    <div class="special-image" v-show="isDisplaySpecialImage">
-      <img src="../special.png" class="home_mv_img">
-    </div>
-    <div class="modal-all" v-show="isDisplayModal">
-      <div class="modal-window">
-        <span class="modal-close" v-on:click="closeModal">&times;</span>
-        <br>
-        <div class="modal-navi">
-          <p>
-            <br>
-            << 隠し要素 >>
-            <br>
-            ハイスコアを目指してね！
-          </p>
-          <button class="modal-button"
-              onclick="location.href='https://bwsunkist.github.io/memorial-ar/minigame'">
-              ミニゲームを遊ぶ
-          </button>
-          <br>
-          <br>
-          <button class="modal-button"
-              v-on:click="closeModal">
-              今は遊ばない
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="cmd" v-show="isDisplayCmd">
-      <p>{{ cmdHistoryStr }}</p>
-    </div>
     <div class="home_mv" v-touch:longtap="onLongTap">
       <img src="../sample2.webp" class="home_mv_img">
     </div>
@@ -85,6 +55,36 @@
     <div class="navi">
       <a href="https://akita-pages.notion.site/Bride-Erina-Profile-f10f3907207b4fb8b3da19736bdcf56c?pvs=4" class="btn btn-malformation">> Bride</a>
       <a href="https://akita-pages.notion.site/Groom-Masahiro-Profile-74dd63394ae74169be2da4e374021b54?pvs=4" class="btn btn-malformation2">> Groom</a>
+    </div>
+    <div class="special-image" v-show="isDisplaySpecialImage">
+      <img src="../special.png" class="home_mv_img">
+    </div>
+    <div class="modal-all" v-show="isDisplayModal">
+      <div class="modal-window">
+        <span class="modal-close" v-on:click="closeModal">&times;</span>
+        <br>
+        <div class="modal-navi">
+          <p>
+            <br>
+            << 隠し要素 >>
+            <br>
+            ハイスコアを目指してね！
+          </p>
+          <button class="modal-button"
+              onclick="location.href='https://bwsunkist.github.io/memorial-ar/minigame'">
+              ミニゲームを遊ぶ
+          </button>
+          <br>
+          <br>
+          <button class="modal-button"
+              v-on:click="closeModal">
+              今は遊ばない
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cmd" v-show="isDisplayCmd">
+      <p>{{ cmdHistoryStr }}</p>
     </div>
   </div>
 </template>
