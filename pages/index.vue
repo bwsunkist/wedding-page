@@ -7,7 +7,7 @@
       v-touch:swipe.bottom="onSwipeDown"
   >
     <div class="special-image" v-show="isDisplaySpecialImage">
-      <img src="../assets/special.png" class="home_mv_img">
+      <img src="../special.png" class="home_mv_img">
     </div>
     <div class="modal-all" v-show="isDisplayModal">
       <div class="modal-window">
@@ -37,7 +37,7 @@
       <p>{{ cmdHistoryStr }}</p>
     </div>
     <div class="home_mv" v-touch:longtap="onLongTap">
-      <img src="../assets/sample2.webp" class="home_mv_img">
+      <img src="../sample2.webp" class="home_mv_img">
     </div>
     <div class="home_mv_text">
       <h1>
