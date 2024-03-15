@@ -151,10 +151,10 @@
   }
 
   const checkHistory = () => {
-    if (cmdHistory.value.length == 11 ) {
+    if (cmdHistory.value.length == 7 ) {
       cmdHistory.value.shift()
     }
-    const konami =  ["↑","↑","↓","↓","←","→","←","→","tap","tap"];
+    const konami =  ["←","→","←","→","tap","tap"];
     const konamiStr = konami.join();
     if(cmdHistory.value.join() == konamiStr) {
       console.log("debug:trigger konami")
